@@ -1,0 +1,93 @@
+.subscribe-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 15rem;
+    background-color: #f0efe9;
+    width: 100%;
+  }
+  .subscribe-section .subscribe-content {
+    flex-grow: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  .subscribe-section .subscribe-image {
+    max-width: 200px;
+    height: auto;
+    position: absolute;
+    margin-top: 6rem;
+    right: 0;
+  }
+  .subscribe-section .subscribe-text {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .subscribe-section .subscribe-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .subscribe-section .subscribe-input-group .subscribe-input {
+    width: 15rem;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+  }
+  .subscribe-section .subscribe-button {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+    color: black;
+    background-color: #f4ed6f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .subscribe-section .subscribe-button:hover {
+    background-color: #f0e68c;
+  }
+  .subscribe-section .subscribe-button i {
+    margin-left: 10px;
+    transform: rotate(-45deg);
+  }
+  @media (max-width: 768px) {
+    .subscribe-section {
+      flex-direction: column;
+      padding: 50px 1rem;
+      position: relative;
+    }
+    .subscribe-section .subscribe-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      z-index: 2;
+    }
+    .subscribe-section .subscribe-image {
+      position: absolute;
+      max-width: 100px;
+      bottom: 0;
+      right: 0;
+      transform: none;
+      z-index: 1;
+      margin: 0;
+    }
+    .subscribe-section .subscribe-text {
+      font-size: 24px;
+    }
+    .subscribe-section .subscribe-input-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .subscribe-section .subscribe-input-group .subscribe-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .subscribe-section .subscribe-button {
+      padding: 12px 20px;
+      width: 100%;
+    }
+  }

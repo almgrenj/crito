@@ -1,0 +1,117 @@
+.hero {
+    background-color: #f0efe9;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .hero .curved-lines {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
+  .hero .hero-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13rem 0 5rem;
+    box-sizing: border-box;
+  }
+  .hero .hero-text {
+    flex: 1;
+    max-width: 70%;
+    padding-left: 170px;
+    margin-right: 20px;
+  }
+  .hero .hero-title {
+    font-size: 72px;
+    margin: 0;
+    font-weight: bold;
+    color: #020023;
+  }
+  .hero .hero-subtitle {
+    font-size: 18px;
+    margin-top: 1rem;
+    color: #555;
+  }
+  .hero .hero-buttons {
+    margin-top: 2rem;
+    padding-top: 20px;
+    display: flex;
+  }
+  .hero .hero-button, .hero .hero2-button {
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5rem;
+  }
+  .hero .hero-button .fas.fa-arrow-right, .hero .hero2-button .fas.fa-arrow-right {
+    transform: rotate(-45deg);
+  }
+  .hero .hero-button {
+    border: none;
+    background-color: #f4ed6f;
+    color: black;
+    border: 1px solid #f4ed6f;
+  }
+  .hero .hero-button:hover {
+    background-color: #f0e68c;
+  }
+  .hero .hero2-button {
+    background-color: transparent;
+  }
+  .hero .hero2-button:hover {
+    background-color: #f0e68c;
+  }
+  .hero .hero-image {
+    flex: 1;
+    max-width: 40%;
+    margin-left: 20px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero .hero-content {
+      flex-direction: column;
+      padding: 0px;
+    }
+    .hero .hero-text, .hero .hero-image {
+      max-width: 100%;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+      text-align: center;
+    }
+    .hero .hero-title {
+      font-size: 38px;
+    }
+    .hero .hero-subtitle {
+      font-size: 14px;
+    }
+    .hero .hero-buttons {
+      justify-content: center;
+      margin-top: 0px;
+    }
+    .hero .hero-button, .hero .hero2-button {
+      margin-right: 10px;
+    }
+    .hero .curved-lines {
+      width: 80%;
+      left: 0%;
+      bottom: 0;
+      transform: none;
+    }
+  }

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.main {
+  background: center/cover no-repeat url("assets/images/background-lines-right.svg");
+}
+
+@media (max-width: 768px) {
+  .main {
+    background-size: contain;
+  }
+  .logo-row {
+    gap: 0px;
+    padding: 0 10px;
+  }
+  .logo-row img {
+    max-width: 20%;
+  }
+  .features-container,
+  .consulting-section,
+  .gallery-section {
+    padding: 0 15px;
+  }
+}

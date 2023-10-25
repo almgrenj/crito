@@ -1,0 +1,222 @@
+.team-section {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgba(240, 208, 130, 0.93);
+  }
+  .team-section .team-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0 13rem;
+  }
+  .team-section .team-header-title {
+    color: orange;
+    font-size: 1rem;
+    margin: 3rem 0 1.25rem;
+    font-weight: bold;
+  }
+  .team-section .team-header-subtitle {
+    color: #020023;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin: 0 0 1.25rem 0;
+  }
+  .team-section .browse-team-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    margin-top: 3rem;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+  }
+  .team-section .browse-team-button i {
+    margin-left: 0.625rem;
+    transform: rotate(-45deg);
+  }
+  .team-section .team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+    gap: 1rem;
+    padding: 0 11rem;
+  }
+  .team-section .team-gallery .team-member {
+    text-align: left;
+  }
+  .team-section .team-gallery .team-member img {
+    width: 100%;
+    height: 21.875rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 0.25rem;
+  }
+  .team-section .team-gallery .team-member h3,
+  .team-section .team-gallery .team-member p {
+    margin: 0.25rem 0;
+  }
+  .team-section .team-gallery .team-member p {
+    font-size: small;
+  }
+  .team-section .dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  .team-section .dots .dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 0.3125rem;
+    background-color: gray;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  .team-section .dots .dot:hover {
+    background-color: black;
+  }
+  @media (max-width: 768px) {
+    .team-section .team-header {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+    .team-section .team-header-title {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .team-section .team-header-subtitle {
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .team-section .browse-team-button {
+      margin-top: 1.5rem;
+      justify-self: center;
+    }
+    .team-section .team-gallery {
+      padding: 0 1rem;
+      gap: 0.5rem;
+    }
+    .team-section .team-gallery .team-member img {
+      height: 31.25rem;
+    }
+    .team-section .dots {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .testimonials {
+    display: grid;
+    gap: 2rem;
+    padding: 5rem;
+    margin: 0 10rem 5rem;
+    background-color: white;
+  }
+  .testimonials .title {
+    display: grid;
+    place-items: center;
+  }
+  .testimonials .title p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+    color: orange;
+  }
+  .testimonials .title h2 {
+    font-size: 2.25rem;
+    margin: 0 0 1.25rem;
+    padding-bottom: 3rem;
+    font-weight: bold;
+    color: #020023;
+  }
+  .testimonials .testimonial-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .testimonials .testimonial {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials .testimonial .stars {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: orange;
+  }
+  .testimonials .testimonial p {
+    margin-bottom: 1.5rem;
+  }
+  .testimonials .testimonial .client-info {
+    display: flex;
+    align-items: center;
+  }
+  .testimonials .testimonial .client-info .client-image {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-right: 1rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 0.125rem solid white;
+    border-radius: 50%;
+  }
+  .testimonials .testimonial .client-info .client-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials .client-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .testimonials .client-title {
+    font-size: 0.875rem;
+    margin: 0;
+    color: orange;
+  }
+  .testimonials .testimonial-button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .testimonials .testimonial-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  .testimonials .testimonial-button:hover {
+    background-color: grey;
+  }
+  .testimonials .testimonial-button i.fas {
+    margin-left: 0.625rem;
+    transform: rotate(-45deg);
+  }
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: 2rem;
+      margin: 0;
+    }
+    .testimonials .testimonial-wrapper {
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+    .testimonials .testimonial {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .testimonials .testimonial .client-info {
+      justify-content: center;
+    }
+    .testimonials .testimonial .client-info .client-image {
+      margin-right: 0.5rem;
+    }
+  }

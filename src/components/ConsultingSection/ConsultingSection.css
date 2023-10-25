@@ -1,0 +1,142 @@
+.consulting-section {
+    background-color: #f0efe9;
+    padding: 2rem 12rem;
+    text-align: center;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+    .consulting-section {
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .curved-lines-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    .curved-lines-right {
+      transform: scale(0.5);
+      transform-origin: bottom right;
+    }
+  }
+  
+  .consulting-title,
+  .consulting-subtitle {
+    text-align: left;
+    padding-left: 2rem;
+  }
+  @media (max-width: 768px) {
+    .consulting-title,
+    .consulting-subtitle {
+      padding-left: 1rem;
+      text-align: center;
+    }
+  }
+  
+  .consulting-subtitle {
+    color: #020023;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .consulting-title {
+    color: orange;
+    font-size: 1rem;
+    margin: 2rem 0 20px 0;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .box-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .title-underline {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 1rem;
+  }
+  
+  .arrow-button {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 100%;
+  }
+  .arrow-button i {
+    color: white;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .arrow-button {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      margin: 1rem 0;
+    }
+  }
+  
+  .box {
+    position: relative;
+    background-color: #fff;
+    padding: 2rem;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  .box:hover {
+    background-color: #f0e68c;
+  }
+  .box h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+  .box p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  @media (max-width: 768px) {
+    .box {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .browse-services-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    margin: 20px 0 2rem;
+  }
+  .browse-services-button i {
+    transform: rotate(-45deg);
+  }
+  .browse-services-button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }

@@ -1,0 +1,212 @@
+.feature-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+  @media (max-width: 768px) {
+    .feature-section {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+  }
+  
+  .feature-image {
+    position: relative;
+    padding-left: 17rem;
+    margin-right: 7rem;
+  }
+  .feature-image img {
+    height: 600px;
+    width: 100%;
+    margin: 4rem auto;
+  }
+  @media (max-width: 768px) {
+    .feature-image img {
+      height: auto;
+      width: 100%;
+      margin: 2rem auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .feature-image {
+      padding-left: 0;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+  
+  .feature-subtitle {
+    color: #020023;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  @media (max-width: 768px) {
+    .feature-subtitle {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .feature-title {
+    color: orange;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    .feature-title {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .blue-box {
+    position: absolute;
+    bottom: 7rem;
+    left: 13rem;
+    background-color: #b5e3ff;
+    padding: 2rem;
+    width: 80%;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
+  .blue-box .box-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+  }
+  .blue-box .box-subtitle {
+    margin-left: 0.5rem;
+    color: orange;
+    font-size: 1rem;
+  }
+  .blue-box .box-text {
+    font-size: 1em;
+    margin-top: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    .blue-box {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      width: 100%;
+    }
+    .blue-box .box-text {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+  
+  .feature-text {
+    max-width: 500px;
+  }
+  @media (max-width: 768px) {
+    .feature-text {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+  
+  .feature-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: lighter;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    margin: 12rem 0 4rem;
+  }
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 2rem 0;
+    }
+  }
+  
+  .feature-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  .feature-button i {
+    margin-left: 10px;
+    transform: rotate(-45deg);
+  }
+  .feature-button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+  }
+  @media (max-width: 768px) {
+    .feature-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .feature-button-play {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+  }
+  .feature-button-play i {
+    font-size: 1.2rem;
+  }
+  .feature-button-play span {
+    font-size: 1rem;
+    padding-right: 20px;
+  }
+  .feature-button-play:hover {
+    background-color: black;
+    border-radius: 50px;
+    align-items: center;
+  }
+  .feature-button-play:hover span {
+    color: white;
+    font-size: 1rem;
+  }
+  .feature-button-play:hover i {
+    color: white;
+    font-size: 1.2rem;
+  }
+  @media (max-width: 768px) {
+    .feature-button-play {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .play-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+  }

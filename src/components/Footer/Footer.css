@@ -1,0 +1,97 @@
+.footer {
+    background-color: #0e1021;
+    color: gray;
+    position: relative;
+  }
+  .footer .footer-bg-image {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    z-index: 1;
+  }
+  .footer .footer-content {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 220px;
+  }
+  .footer .footer-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .footer .footer-column-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+  }
+  .footer .footer-column a,
+  .footer .footer-column p {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  .footer .footer-column a:link, .footer .footer-column a:visited,
+  .footer .footer-column p:link,
+  .footer .footer-column p:visited {
+    color: gray;
+  }
+  .footer .footer-column a:hover,
+  .footer .footer-column p:hover {
+    color: #ccc;
+    text-decoration: none;
+  }
+  .footer .footer-column .footer-logo-img {
+    margin-bottom: 10px;
+  }
+  .footer .copyright-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 220px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .footer .copyright-section p {
+    color: gray;
+  }
+  .footer .social-media-links {
+    display: flex;
+    gap: 20px;
+  }
+  .footer .social-media-links a {
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    .footer .footer-content {
+      padding: 20px 15px;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .footer .footer-column {
+      padding: 0 10px;
+    }
+    .footer .footer-column-title {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .footer .footer-column a, .footer .footer-column p {
+      margin-bottom: 15px;
+    }
+    .footer .footer-column .footer-logo-img {
+      margin-bottom: 8px;
+    }
+    .footer .copyright-section {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 15px;
+      gap: 10px;
+    }
+    .footer .social-media-links {
+      gap: 15px;
+    }
+    .footer .footer-bg-image {
+      bottom: 5.5rem;
+    }
+  }
