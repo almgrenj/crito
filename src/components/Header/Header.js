@@ -8,10 +8,10 @@ const Header = () => {
       <div className="header-left">
         <nav>
           <ul className="navbar">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/home">Home</a> </li>
             <li><a href="#service">Service</a></li>
             <li><a href="#news">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
       </div>
