@@ -28,6 +28,7 @@
     font-size: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 5rem;
+    font-weight: bold;
   }
   
   .contact-curves {
@@ -67,26 +68,32 @@
     padding: 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 20px;
+    margin-bottom: 2rem;
   }
   
   .box {
     flex: 1;
     border: 1px solid rgb(222, 222, 222);
     padding: 2rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    margin: 1rem;
+    display: flex; 
+    align-items: flex-start; 
   }
-  .box .box-icon {
-    font-size: 2rem;
-    margin-right: 1.5rem;
+
+  .box-icon {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
-  .box .box-text-content {
-    flex: 1;
+
+  .box-text-content {
+    flex-grow: 1; 
   }
+
   .box .box-text-content h2 {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   
   .contact-form-container {
