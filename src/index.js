@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; 
 
@@ -15,10 +15,11 @@ const Main = () => {
   return (
     <div className='wrapper'>
       <BrowserRouter>
-          <Routes>
-            <Route path='/home' element={<Home />} />
-            <Route path='/contact' element={<Contact />} />
-          </Routes>
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/' element={<Navigate to="/home" replace />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
