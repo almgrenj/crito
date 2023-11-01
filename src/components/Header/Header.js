@@ -10,7 +10,7 @@ const Header = () => {
           <ul className="navbar">
             <li><a href="/home">Home</a> </li>
             <li><a href="#service">Service</a></li>
-            <li><a href="#news">News</a></li>
+            <li><a href="/news">News</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
