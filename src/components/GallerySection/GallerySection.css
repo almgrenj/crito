@@ -10,6 +10,7 @@
   .gallery-title,
   .gallery-subtitle {
     text-align: center;
+    font-weight: bold;
   }
   @media (max-width: 768px) {
     .gallery-title,

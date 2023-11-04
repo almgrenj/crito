@@ -29,6 +29,7 @@
 .consulting-subtitle {
   text-align: left;
   padding-left: 2rem;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   .consulting-title,
@@ -49,6 +50,7 @@
   color: orange;
   font-size: 1rem;
   margin: 2rem 0 20px 0;
+  font-weight: bold;
 }
 
 .box-container {
