@@ -1,4 +1,3 @@
-// TeamSection.js
 import React from 'react';
 import './TeamSection.css';
 import img_client1 from '../../assets/images/vince-veras-AJIqZDAUD7A-unsplash.jpg';

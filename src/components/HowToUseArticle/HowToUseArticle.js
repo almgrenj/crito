@@ -1,18 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './HowToUseArticle.css';
-import image1 from '../../assets/images/linkedin-sales-solutions-Mis5fyJi7Q0-unsplash.jpg'; 
+import image1 from '../../assets/images/linkedin-sales-solutions-Mis5fyJi7Q0-unsplash.jpg';
 
 const HowToUseArticle = () => {
+  const { id } = useParams();
+  const [article, setArticle] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchArticle = async () => {
+      try {
+        const response = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setArticle(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchArticle();
+  }, [id]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error fetching article: {error}</div>;
+  }
+
+  if (!article) {
+    return <div>No article found!</div>;
+  }
+
   return (
     <div className="howtouse-section">
-      <h2 className="howtouse-title">How To Use Digitalization</h2>
-      <h2 className="howtouse-title">In The Classroom</h2>
-      <p className="howtouse-subtitle">Mar 25, 2023 <span className="orange-dot"></span> Business <span className="orange-dot"></span> Kimberly Hansen</p>
+      <h2 className="howtouse-title">{article.title}</h2>
+      <p className="howtouse-subtitle">{article.date} <span className="orange-dot"></span> {article.category} <span className="orange-dot"></span> {article.author}</p>
       <div className="howtouse-row">
         <div className="howtouse-item">
-          <img src={image1} alt="1"/>
-          <div className="howtouse-text-content">
-          </div>
+          <img src={article.imageUrl || image1} alt={article.title}/>
         </div>
         <div className="search-bar-with-info">
     <div className="search-bar-container">
@@ -50,8 +84,9 @@ const HowToUseArticle = () => {
       </div>
   </div>
 
-        <p className="howtouse-content1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec in efficitur leo. In hac habitasse platea dictumst. Proin dignissim, nulla a tincidunt aliquet, dui est fermentum ligula, at fermentum metus urna vel elit. Curabitur dapibus iaculis volutpat. Sed in eros et justo facilisis lacinia. Pellentesque at neque mollis, vulputate odio at, vestibulum lorem.
+          <div className="howtouse-text-content">
+            <p className="howtouse-content1">{article.content}</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec in efficitur leo. In hac habitasse platea dictumst. Proin dignissim, nulla a tincidunt aliquet, dui est fermentum ligula, at fermentum metus urna vel elit. Curabitur dapibus iaculis volutpat. Sed in eros et justo facilisis lacinia. Pellentesque at neque mollis, vulputate odio at, vestibulum lorem.
         <br />
         <br />
         Integer nec odio praesent libero sed cursus ante dapibus diam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
@@ -62,7 +97,7 @@ const HowToUseArticle = () => {
         Integer nec odio praesent libero sed cursus ante dapibus diam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
         Integer nec odio praesent libero sed cursus ante dapibus diam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
         <br />
-      </p>
+      </p>          </div>
 
       <blockquote className="howtouse-quote">
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -81,7 +116,7 @@ const HowToUseArticle = () => {
     <span className="tag">Tech</span>
   </div>
     </div>
-  )
-}
+  );
+};
 
 export default HowToUseArticle;

@@ -1,103 +1,169 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: #f0efe9;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f0efe9;
+  position: relative;
+}
+
+.theme-toggle-button:hover {
+  background-color: gray;
+}
+
+.fas.fa-moon {
+  margin-left: 10px;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.dark .navbar li a {
+  color: white;
+}
+
+.light {
+  background-color: #f0efe9;
+  color: black;
+}
+
+.light .navbar li a {
+  color: black; 
+}
+
+header .header-left,
+header .header-right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+header .header-left {
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 26rem;
+}
+
+header .header-right {
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.theme-toggle-button,
+.header .login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle-button {
+  background-color: #333;
+  color: white;
+  margin-right: 1rem;
+}
+
+.header .login-button {
+  background-color: #f4ed6f;
+  color: black;
+  margin-right: 220px;
+}
+
+.header .login-button .fas,
+.theme-toggle-button .fas {
+  margin-left: 8px;
+}
+
+.header .login-button .fas.fa-arrow-right {
+  transform: none;
+}
+
+.header .login-button:hover {
+  background-color: #f0e68c;
+}
+
+.theme-toggle-button:hover {
+  background-color: gray;
+}
+
+header .header-logo-container {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+header .header-logo-container .header-logo {
+  width: 150px;
+  height: auto;
+}
+
+header .navbar {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header .navbar li {
+  display: inline-flex;
+}
+
+header .navbar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  transition: border-bottom 0.3s ease;
+}
+
+header .navbar li a:hover {
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
   }
+
   header .header-left,
   header .header-right {
-    display: flex;
-    align-items: center;
     width: 100%;
-  }
-  header .header-left {
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 26rem;
-  }
-  header .header-right {
-    justify-content: flex-end;
-    width: 30%;
-  }
-  
-  header .login-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 50px;
-    background-color: #f4ed6f;
-    color: black;
-    cursor: pointer;
-    margin-right: 220px;
-  }
-  header .login-button .fas.fa-arrow-right {
-    transform: rotate(-45deg);
-  }
-  header .login-button:hover {
-    background-color: #f0e68c;
-  }
-  header .header-logo-container {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  header .header-logo-container .header-logo {
-    width: 150px;
-    height: auto;
-  }
-  header .navbar {
-    display: flex;
-    gap: 2rem;
-    list-style-type: none;
     padding: 0;
-    margin: 0;
+    justify-content: center;
   }
-  header .navbar li {
-    display: inline-flex;
+
+  header .header-left {
+    margin-top: 3rem;
   }
-  
+
+  header .header-logo-container {
+    top: 10%;
+    left: 50%;
+    margin-top: 1rem;
+  }
+
+  header .login-button {
+    margin-right: 0;
+  }
+
+  header .navbar {
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
   header .navbar li a {
-    text-decoration: none;
-    color: black;
     font-size: 1rem;
-    transition: border-bottom 0.3s ease;
   }
-  header .navbar li a:hover {
-    border-bottom: 2px solid black;
-  }
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      padding: 1rem;
-    }
-    header .header-left,
-    header .header-right {
-      width: 100%;
-      padding: 0;
-      justify-content: center;
-    }
-    header .header-left {
-      margin-top: 3rem;
-    }
-    header .header-logo-container {
-      top: 10%;
-      left: 50%;
-      margin-top: 1rem;
-    }
-    header .login-button {
-      margin-right: 0;
-    }
-    header .navbar {
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    header .navbar li a {
-      font-size: 1rem;
-    }
-  }
+}

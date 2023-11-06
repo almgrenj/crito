@@ -1,4 +1,4 @@
-.footer {
+  .footer {
     background-color: #0e1021;
     color: gray;
     position: relative;
@@ -82,6 +82,11 @@
     .footer .footer-column .footer-logo-img {
       margin-bottom: 8px;
     }
+
+    .footer-bg-image {
+      margin-bottom: 27px;
+    }
+
     .footer .copyright-section {
       flex-direction: column;
       align-items: flex-start;

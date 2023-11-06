@@ -3,7 +3,6 @@ import './Footer.css'
 import img_backgroundlines from '../../assets/images/background-lines-white-right.svg'
 import img_logotype from '../../assets/images/logotype-white.svg'
 
-
 const Footer = () => {
   return (
     <footer className="footer">

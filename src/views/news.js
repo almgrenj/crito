@@ -1,4 +1,5 @@
 import React from 'react'
+import useScrollToTop from '../uScrollToTop'; 
 
 import TopBar from '../components/TopBar/TopBar';
 import Header from '../components/Header/Header';
@@ -7,7 +8,9 @@ import HeroNewsSection from '../components/HeroNewsSection/HeroNewsSection';
 import ArticleNews from '../components/ArticleNews/ArticleNews';
 import SubscribeSection from '../components/SubscribeSection/SubscribeSection';
 
-const news = () => {
+const News = () => {
+  useScrollToTop(); 
+
   return (
     <div>
       <TopBar />
@@ -20,4 +23,4 @@ const news = () => {
   )
 }
 
-export default news
+export default News

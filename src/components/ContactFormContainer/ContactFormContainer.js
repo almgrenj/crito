@@ -9,24 +9,41 @@ const ContactFormContainer = () => {
   });
   const [submitMessage, setSubmitMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const namePattern = /^[A-Za-z\s]{2,50}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const validate = () => {
+    let tempErrors = {};
+    tempErrors.name = namePattern.test(formData.name) ? '' : 'Invalid name, lol.';
+    tempErrors.email = emailPattern.test(formData.email) ? '' : 'Invalid email format, lol.';
+    tempErrors.message = formData.message ? '' : 'MeSSage iS rEqUiReD, lol.';
+    setErrors(tempErrors);
+
+    return Object.values(tempErrors).every(x => x === '');
+  };
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    setErrors({
+      ...errors,
+      [e.target.name]: '',
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!formData.name || !formData.email || !formData.message) {
-      setSubmitMessage('Please fill in all fields.');
+    if (!validate()) {
+      setSubmitMessage('Please correct the errors before submitting, lol.');
       return;
     }
 
     setIsSubmitting(true);
-
     const payload = {
       name: formData.name,
       email: formData.email,
@@ -42,13 +59,11 @@ const ContactFormContainer = () => {
         body: JSON.stringify(payload),
       });
 
-      console.log('API response:', response); 
-
       if (response.ok) {
-        setSubmitMessage('Thanks bro! Ur message has been sent.');
-        setFormData({ name: '', email: '', message: '' }); 
+        setSubmitMessage('Thanks! Ur message has been zent.');
+        setFormData({ name: '', email: '', message: '' });
       } else {
-        throw new Error('Failed to send mezzage');
+        throw new Error('Failed to send message.');
       }
     } catch (error) {
       setSubmitMessage(error.message || 'An error occurred. Please try again.');
@@ -73,6 +88,8 @@ const ContactFormContainer = () => {
           onChange={handleInputChange}
           disabled={isSubmitting}
         />
+        {errors.name && <div className="error-message">{errors.name}</div>}
+
         <input 
           type="email" 
           name="email"
@@ -82,6 +99,8 @@ const ContactFormContainer = () => {
           onChange={handleInputChange}
           disabled={isSubmitting}
         />
+        {errors.email && <div className="error-message">{errors.email}</div>}
+
         <textarea 
           name="message"
           placeholder="Your Message*" 
@@ -90,6 +109,8 @@ const ContactFormContainer = () => {
           onChange={handleInputChange}
           disabled={isSubmitting}
         ></textarea>
+        {errors.message && <div className="error-message">{errors.message}</div>}
+
         <button type="submit" className="submit-button" disabled={isSubmitting}>
           Send Message<i className="fas fa-arrow-right"></i>
         </button>

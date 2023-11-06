@@ -1,4 +1,4 @@
-.hero .hero-content {
+  .hero .hero-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,20 +30,7 @@
     margin-bottom: 5rem;
     font-weight: bold;
   }
-  
-  .contact-curves {
-    margin-top: 1rem;
-    width: 60%;
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 40%;
-    height: auto;
-    top: 15%;
-    margin-top: 0;
-    margin-bottom: 4rem;
-  }
-  
+
   .header-right .login-button .fas.fa-arrow-right {
     transform: rotate(-45deg);
     margin-left: 5px;
@@ -163,10 +150,7 @@
       margin-top: 0.3rem;
       margin-bottom: 3rem;
     }
-    .contact-curves {
-      width: 80%;
-      top: 40%;
-    }
+ 
     .header-right .login-button .fas.fa-arrow-right {
       margin-left: 3px;
     }

@@ -1,5 +1,3 @@
-// home.js
-
 import React from 'react';
 
 import TopBar from '../components/TopBar/TopBar';
@@ -27,7 +25,9 @@ const Home = () => {
       <FeatureReversedSection />
       <GallerySection />
       <TeamAndTestimonialSection />
+      <div className="page-default">
       <ArticleSection />
+      </div>
       <SubscribeSection />
       <Footer />
     </div>

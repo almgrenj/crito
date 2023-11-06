@@ -8,7 +8,7 @@ const SubscribeSection = () => {
       <div className="subscribe-content">
         <p className="subscribe-text">Get News Updates By Signup</p>
         <div className="subscribe-input-group">
-            <input type="email" placeholder="username@domain.com" className="subscribe-input" /> {/* Closed the input tag */}
+            <input type="email" placeholder="username@domain.com" className="subscribe-input" />
             <button className="subscribe-button">
                 Subscribe <i className="fas fa-arrow-right"></i>
             </button>

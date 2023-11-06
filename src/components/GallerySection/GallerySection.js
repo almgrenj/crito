@@ -5,7 +5,6 @@ import image2 from '../../assets/images/marek-levak-zANXcXyByos-unsplash.jpg';
 import image3 from '../../assets/images/oli-dale-xjSkI_seiZY-unsplash.jpg'; 
 import image4 from '../../assets/images/carlos-muza-hpjSkU2UYSU-unsplash.jpg'; 
 
-
 const GallerySection = () => {
   return (
     <div className="gallery-section">

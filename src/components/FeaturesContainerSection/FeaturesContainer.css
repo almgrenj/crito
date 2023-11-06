@@ -1,4 +1,4 @@
-.features-container {
+  .features-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 20px;
@@ -28,9 +28,33 @@
     padding: 0 20px;
     margin-bottom: 1rem;
   }
+  
   .logo-row img {
     max-width: 100%;
     height: auto;
+  }
+  
+  @media (max-width: 1024px) {
+    .logo-row {
+
+      padding: 0 10px;
+      gap: 5px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo-row {
+
+      flex-direction: column; 
+      padding: 0;
+      gap: 10px; 
+    }
+    
+    .logo-row img {
+   
+      max-width: 80%;
+      margin: 0 auto; 
+    }
   }
   
   .text-section {
