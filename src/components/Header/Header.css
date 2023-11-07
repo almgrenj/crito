@@ -141,6 +141,10 @@ header .navbar li a:hover {
     justify-content: center;
   }
 
+  header .header-right {
+    justify-content: center;
+  }
+
   header .header-left {
     margin-top: 3rem;
   }
@@ -165,5 +169,19 @@ header .navbar li a:hover {
 
   header .navbar li a {
     font-size: 1rem;
+  }
+  
+  .theme-toggle-button,
+  .header .login-button {
+    margin: 0 auto; 
+    margin-bottom: 1rem; 
+  }
+
+  .theme-toggle-button {
+    margin-right: 0.5rem; 
+  }
+
+  .header .login-button {
+    margin-left: 0.5rem;
   }
 }
